@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>NOWHERE 0/9</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #codeInput {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #submitBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QUEL EST LE CODE JUSTE ?</h1>
+      </header>
+    <form id="codeForm">
+        <input type="text" id="codeInput" maxlength="9" placeholder="Numérus" required>
+        <br><br>
+        <input type="button" value="Vérifier le code" id="submitBtn" onclick="checkCode()">
+    </form>
+
+    <script>
+
+        function checkCode() {
+            // Récupérer la valeur du champ de code
+            var code = document.getElementById("codeInput").value;
+
+            // Vérifier si le code a une longueur de 9 caractères
+            if (code.length === 9) {
+                // Vérifier si le code entré correspond au code attendu
+                if (code == "07081967M") {
+                    // Rediriger vers la page Sayf.html
+                    window.location.href = "Sayf.html";
+                } else {
+                    alert("Code incorrect. Veuillez réessayer.");
+                }
+            } else {
+                alert("Le code doit contenir exactement 9 caractères.");
+            }
+        }
+    </script>
+</body>
+</html>
+    
+  </head>
+
+  <body>
+    
